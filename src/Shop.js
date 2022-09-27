@@ -37,7 +37,11 @@ export default function Shop(props) {
   } else {
   return (
     <div className="shop">
-      <Item info={items} loader={loader}/>
+      <ul>
+      {items.map((item) => (
+        <Item info={item} loader={loader}/>
+      ))}
+      </ul>
       <div className="flex flex-col">
       <button  type ="submit" className="flex items-center justify-center  focus:outline-none text-white text-sm sm:text-base bg-blue-500 hover:bg-blue-600 rounded-2xl py-2 w-full transition  duration-150"
         onClick={props.onClickExit}>

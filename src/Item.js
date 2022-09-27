@@ -16,15 +16,13 @@ export default function Item(props) {
   }
 
   return (
-      <ul>
-      {info.map((i) => (
-        <li key={i.id}>
+        <li key={info.id}>
           <div className="item">
-            <img src={i.image} alt="item_image" className="rounded-xl" /> 
+            <img src={info.image} alt="item_image" className="rounded-xl" /> 
               <div className="mx-4 mb-2 ">
-              <h2 className="my-4 font-sans font-medium text-xl">{i.name}</h2>
+              <h2 className="my-4 font-sans font-medium text-xl">{info.name}</h2>
               <p className="font-sans text-lg">
-                {i.desc}</p>
+                {info.desc}</p>
               </div>
             <div className="flex flex-row ml-2 mb-6">
               <button
@@ -43,8 +41,5 @@ export default function Item(props) {
             </div>
           </div>
         </li>
-      ))}
-    </ul>
-    
   );
 }
