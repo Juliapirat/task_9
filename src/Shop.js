@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import uuid from "uuid";
 import Item from "./Item.js";
 
 export default function Shop(props) {
@@ -39,7 +40,7 @@ export default function Shop(props) {
     <div className="shop">
       <ul>
       {items.map((item) => (
-        <Item info={item} loader={loader}/>
+        <Item key={uuid()} info={item} loader={loader}/>
       ))}
       </ul>
       <div className="flex flex-col">
